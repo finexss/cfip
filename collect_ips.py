@@ -6,6 +6,7 @@ import os
 # 目标URL列表
 urls = ['https://ip.164746.xyz/ipTop10.html', 
         'https://www.wetest.vip/page/cloudflare/address_v4.html', 
+        'https://www.wetest.vip/page/cloudflare/total_v4.html',
         'https://cf.090227.xyz'
         ]
 
@@ -31,6 +32,8 @@ with open('ip.txt', 'w') as file:
         elif url == 'https://cf.090227.xyz':
             elements = soup.find_all('tr')
         elif url == 'https://www.wetest.vip/page/cloudflare/address_v4.html':
+            elements = soup.find_all('tr')
+        elif url == 'https://www.wetest.vip/page/cloudflare/total_v4.html':
             elements = soup.find_all('tr')
         else:
             elements = soup.find_all('li')
